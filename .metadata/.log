@@ -1,0 +1,33 @@
+
+!ENTRY org.eclipse.egit.core 4 0 2016-10-19 15:17:42.722
+!MESSAGE An exception occurred during push on URI https://github.com/SURABHIR/PIIM_SCM_CICD.git: https://github.com/SURABHIR/PIIM_SCM_CICD.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/SURABHIR/PIIM_SCM_CICD.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:495)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:381)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:189)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:77)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:48)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-10-19 15:17:42.725
+!MESSAGE Can't connect to any repository: https://github.com/SURABHIR/PIIM_SCM_CICD.git (https://github.com/SURABHIR/PIIM_SCM_CICD.git: not authorized)
+
+!ENTRY org.eclipse.core.resources 4 566 2016-10-19 15:19:36.319
+!MESSAGE Could not save master table to file 'D:\PIIM_SCM_CICD\PIIM_SCM_CICD\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources'.
+!STACK 0
+java.io.FileNotFoundException: D:\PIIM_SCM_CICD\PIIM_SCM_CICD\.metadata\.plugins\org.eclipse.core.resources\.safetable\org.eclipse.core.resources (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:45)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:41)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1227)
+	at org.eclipse.core.internal.resources.SaveManager.saveMasterTable(SaveManager.java:1220)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1197)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1109)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:51)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)

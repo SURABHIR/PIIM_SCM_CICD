@@ -5,10 +5,11 @@ echo "Enter to number to print Even numbers upto this number starting from begin
 read a                                                                                                                                                                                                                                
                                                                                                                                                                                                                                       
 for ((i=1; i <= $a; ++i))                                                                                                                                                                                                             
-do                                                                                                                                              
+do                                                                                                                                                                       
                                                                                                                                                                                                                                       
-     if  (( i % 2 ))                                                                                                                                                                                                                 
+     if  !(( i % 2 ))                                                                                                                                                                                                                 
       then                                                                                                                                                                                                                            
          echo $i                                                                                                                                                                                                                      
       fi                                                                                                                                                                                                                              
 done
+
